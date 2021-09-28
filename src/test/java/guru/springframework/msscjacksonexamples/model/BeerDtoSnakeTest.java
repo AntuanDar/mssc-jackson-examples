@@ -15,6 +15,9 @@ import java.io.IOException;
  * description: в application-snake.properties указано использовать отличную от дефолтной
  * стратегию при сериализации из объекта в json записывать имена полей в стиле SNAKE_CASE
  * Класс в котором хранятся константы стратегий PropertyNamingStrategy
+ * Если у поля стоит аннотиция @JsonProperty("beerId") где указан параметр default (то при сериализации будет
+ * использоваться это имя вместо названия поля, но при десериализации в самом json должен быть так же указан beerId
+ * если будет id, то его значение будет null
  */
 @ActiveProfiles("snake")
 @JsonTest
