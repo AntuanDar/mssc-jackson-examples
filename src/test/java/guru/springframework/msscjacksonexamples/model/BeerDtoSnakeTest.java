@@ -18,6 +18,11 @@ import java.io.IOException;
  * Если у поля стоит аннотиция @JsonProperty("beerId") где указан параметр default (то при сериализации будет
  * использоваться это имя вместо названия поля, но при десериализации в самом json должен быть так же указан beerId
  * если будет id, то его значение будет null
+ *
+ * @JsonFormat(shape = JsonFormat.Shape.STRING) - это аннотация скажет Jackson, что нужно приобразить значения поля к строке
+ * например число
+ *
+ * @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ", shape = JsonFormat.Shape.STRING) - можно указать паттерн для даты
  */
 @ActiveProfiles("snake")
 @JsonTest
